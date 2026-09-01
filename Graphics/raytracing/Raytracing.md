@@ -95,22 +95,19 @@ OpenMP로 루프를 병렬화하면 CPU 코어를 다 써서 렌더링 시간을
 
 ---
 
-> [!NOTE]
-> **보충**
->
-> Whitted, "An Improved Illumination Model for Shaded Display", CACM 1980.
-> 눈에서 쏘는 이유, 반사/굴절/그림자 광선이 거기 모델이다.
-
----
-
 > [!WARNING]
 > **더 보충이 필요한 부분**
 >
-> 광원 샘플링은 다시 적겠다고 한 부분이다. Monte Carlo / next event estimation이라 공식 한 줄로 안 끝난다.
->
-> - 면광원을 여러 방향에서 샘플
-> - 샘플마다 shadow ray로 가시성
-> - 가중 평균이 그 점의 직사광
->
-> **출처로 볼 책:** PBRT (Pharr et al.) Light Sampling 챕터.
-> 지금은 추측 수식 안 넣는다.
+> 내가 안 적은 설명은 여기 넣지 않는다. 나중에 아래를 적어야 한다.
+
+| 무엇 | 왜 | 볼 곳 |
+| --- | --- | --- |
+| 눈에서 쏘는 이유, 반사/굴절/그림자 광선 | 원문은 여담으로만 있음 | Whitted, "An Improved Illumination Model for Shaded Display", CACM 1980 |
+| Reflect Ray 방향 | 원 정리에 **굴절 법칙**이라고 적음. 반사와 굴절을 나눠 적어야 함 | Wikipedia [Specular reflection](https://en.wikipedia.org/wiki/Specular_reflection), [Snell's law](https://en.wikipedia.org/wiki/Snell%27s_law), [Ray tracing (graphics)](https://en.wikipedia.org/wiki/Ray_tracing_(graphics)) |
+| 광원 샘플링 | 원문에 다시 적겠다고 함. 공식 한 줄로 안 끝남 | PBRT Light Sampling 챕터 |
+
+---
+
+## 연습 코드
+
+이론은 이 폴더. 코드는 [그래픽스 연습](../../Projects/그래픽스 연습/그래픽스 연습.md).

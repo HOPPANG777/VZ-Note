@@ -661,15 +661,82 @@ SPECS = {
         "Phong",
         ["Ambient + Diffuse + Specular", "Diffuse : n · l", "Specular : (r · v)^n"],
     ),
-    "Graphics/raytracing/FindClosestCollision.md": (
+    "Graphics/raytracing/Closest-Hit.md": (
         "hflow",
-        "FindClosestCollision",
-        ["광선", "모든 객체 교차 검사", "가장 짧은 t", "Hit (점/법선/UV)"],
+        "Closest hit",
+        ["Ray", "every Object", "CheckRayCollision", "smallest t", "Hit"],
     ),
-    "Graphics/raytracing/Sphere.md": (
+    "Graphics/raytracing/Ray-Sphere.md": (
         "formula",
         "Ray-Sphere",
-        ["p(t) = o + t d", "|p - c|² = r²", "t에 대한 이차방정식"],
+        ["p(t) = o + t d", "|p - c|² = r²", "quadratic in t"],
+    ),
+    "Graphics/raytracing/Ray-Triangle.md": (
+        "vflow",
+        "Ray-Triangle",
+        ["face normal", "t to plane", "point in triangle?", "barycentric UV"],
+    ),
+    "Projects/그래픽스 연습/그래픽스 연습.md": (
+        "three",
+        "그래픽스 연습",
+        [
+            ("타입", ["Ray", "Hit", "Object"]),
+            ("교차", ["FindClosestCollision", "Sphere / Triangle / Square"]),
+            ("추적", ["Render", "TraceRay"]),
+        ],
+    ),
+    "Projects/그래픽스 연습/타입/Ray.md": (
+        "stack",
+        "Ray",
+        ["start 시작점", "dir 방향"],
+    ),
+    "Projects/그래픽스 연습/타입/Hit.md": (
+        "stack",
+        "Hit",
+        ["distance", "point / normal / uv", "obj"],
+    ),
+    "Projects/그래픽스 연습/타입/Object.md": (
+        "stack",
+        "Object",
+        ["amb / diff / spec", "CheckRayCollision = 0"],
+    ),
+    "Projects/그래픽스 연습/교차/FindClosestCollision.md": (
+        "vflow",
+        "가장 가까운 Hit",
+        [
+            "closestD = 1000, distance = -1",
+            "objects 전부 검사",
+            "distance >= 0 이고 더 짧으면 갱신",
+            "closestHit 반환",
+        ],
+    ),
+    "Projects/그래픽스 연습/교차/Sphere.md": (
+        "formula",
+        "광선-구",
+        ["p(t) = start + t * dir", "이차방정식 → d1, d2", "가까운 거리"],
+    ),
+    "Projects/그래픽스 연습/교차/Triangle.md": (
+        "vflow",
+        "광선-삼각형",
+        ["면 법선", "평면까지 t", "점이 삼각형 안인지", "무게중심으로 UV"],
+    ),
+    "Projects/그래픽스 연습/교차/Square.md": (
+        "hflow",
+        "Square",
+        ["삼각형 2개", "각각 CheckRayCollision", "맞은 쪽 중 가까운 것"],
+    ),
+    "Projects/그래픽스 연습/추적/Render.md": (
+        "hflow",
+        "Render",
+        ["픽셀 (x, y)", "월드 좌표", "Ray", "TraceRay"],
+    ),
+    "Projects/그래픽스 연습/추적/TraceRay.md": (
+        "two",
+        "TraceRay",
+        [
+            ("1차", ["pixelRay", "FindClosestCollision", "가장 가까운 Hit"]),
+            ("그림자", ["hit.point + 1e-4", "FindClosestCollision", "가리는 물체 있나"]),
+        ],
     ),
     "Engine/Unity/Delegate.md": (
         "hflow",

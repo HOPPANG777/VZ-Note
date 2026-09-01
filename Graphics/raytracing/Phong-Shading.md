@@ -14,12 +14,13 @@
 
 ---
 
-> [!NOTE]
-> **보충**
+> [!WARNING]
+> **더 보충이 필요한 부분**
 >
-> - **출처:** Bui Tuong Phong, "Illumination for Computer Generated Pictures", CACM 1975.
-> 픽셀마다 법선을 보간해서 조명하는 게 Phong shading이고,
-> 조명 모델 식(ambient+diffuse+specular)은 Phong reflection model이다.
-> 면접에서 이름이 섞여 불린다. 둘을 한 문장으로 구분해 두면 좋다.
-> - 셰이딩: 정점이 아니라 픽셀에서 조명
-> - 반사 모델: I = ambient + diffuse(n·l) + specular(r·v)^n
+> 내가 안 적은 설명은 여기 넣지 않는다. 나중에 아래를 적어야 한다.
+
+| 무엇 | 왜 | 볼 곳 |
+| --- | --- | --- |
+| Phong shading vs Phong reflection model | 면접에서 이름이 섞임. 한 문장으로 구분해 적어야 함 | Phong, "Illumination for Computer Generated Pictures", CACM 1975. Wikipedia [Phong shading](https://en.wikipedia.org/wiki/Phong_shading), [Phong reflection model](https://en.wikipedia.org/wiki/Phong_reflection_model) |
+
+연습 코드: [TraceRay](../../Projects/그래픽스 연습/추적/TraceRay.md)
